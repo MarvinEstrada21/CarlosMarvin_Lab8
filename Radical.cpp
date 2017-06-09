@@ -4,10 +4,7 @@
 
 #include <iostream>
 #include <typeinfo>
-<<<<<<< HEAD
 
-=======
->>>>>>> 9144708c8dbd0ae3620d6d9d24afe90e4086a518
 using namespace std;
 
 Radical::Radical():Real(){
