@@ -10,8 +10,11 @@ class Racional: public Real{
 	public:
 		Racional(double,double);
 		Racional();
-		double getNumerador();
+		double getNumerador(double);
 		void setNumerador(); 
+
+		double getDenominador();
+		void setDenominador();
 
 };
 

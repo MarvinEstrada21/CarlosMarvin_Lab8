@@ -8,12 +8,14 @@ class Radical: public Real{
 		double indice;
 		double radicando;
 	public:
-		double getCoeficiente();
-		void setCoeficiente();
+		Radical();
+		Radical(double,double,double);
+		double getCoeficiente(double);
+		void setCoeficiente(double);
 
-		double getIndice();
+		double getIndice(double);
 		void setIndice();
 
-		double getRadicando();
+		double getRadicando(double);
 		void setRadicando();
 }
