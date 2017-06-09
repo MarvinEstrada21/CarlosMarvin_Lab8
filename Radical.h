@@ -1,4 +1,5 @@
 #include "Real.h"
+
 #ifndef RADICAL_H
 #define RADICAL_H
 
@@ -10,12 +11,12 @@ class Radical: public Real{
 	public:
 		Radical();
 		Radical(double,double,double);
-		double getCoeficiente(double);
+		double getCoeficiente();
 		void setCoeficiente(double);
 
-		double getIndice(double);
-		void setIndice();
+		double getIndice();
+		void setIndice(double);
 
-		double getRadicando(double);
-		void setRadicando();
+		double getRadicando();
+		void setRadicando(double);
 }
