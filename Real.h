@@ -8,7 +8,7 @@ using namespace std;
 class Real {
 	public:
 		Real();
-		virtual Real* operator+ (Real*);
+		virtual string operator+ (Real*);
 		virtual Real* operator- (Real*);
 		virtual Real* operator* (Real*);
 		virtual Real* operator/ (Real*);

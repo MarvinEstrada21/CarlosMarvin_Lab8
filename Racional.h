@@ -16,9 +16,10 @@ class Racional : public Real{
 		int getDenominador();
 		void setDenominador(int);
 
-		Real* operator+ (Real*);
+		string operator+ (Real*);
 		Real* operator- (Real*);
 		Real* operator* (Real*);
 		Real* operator/ (Real*);
+
 };
-#endif;
+#endif

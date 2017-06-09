@@ -7,18 +7,18 @@ Real :: Real() {
 
 }
 
-Real* Real :: operator+ (Real* suma) {
-	return suma;
+string Real :: operator+ (Real* temp) {
+	return "";
 }
 
-Real* Real :: operator- (Real* resta) {
-	return resta;
+Real* Real :: operator- (Real* temp) {
+	return temp;
 }
 
-Real* Real :: operator* (Real* multi) {
-	return multi;
+Real* Real :: operator* (Real* temp) {
+	return temp;
 }
 
-Real* Real :: operator/ (Real* divi) {
-	return divi;
+Real* Real :: operator/ (Real* temp) {
+	return temp;
 }

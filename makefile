@@ -7,10 +7,10 @@ Main.o:	Main.cpp Real.h Racional.h Radical.h
 Real.o:	Real.cpp Real.h
 	g++ -c Real.cpp
 
-Racional.o:	Racional.cpp Racional.h Real.h
+Racional.o:	Racional.cpp Racional.h Real.h Radical.h
 	g++ -c Racional.cpp
 
-Radical.o:	Radical.cpp Radical.h Real.h
+Radical.o:	Radical.cpp Radical.h Real.h Racional.h
 	g++ -c Radical.cpp
 
 

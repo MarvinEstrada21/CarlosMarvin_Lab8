@@ -20,7 +20,7 @@ class Radical: public Real{
 		double getRadicando();
 		void setRadicando(double);
 
-		Real* operator+ (Real*);
+		string operator+ (Real*);
 		Real* operator- (Real*);
 		Real* operator* (Real*);
 		Real* operator/ (Real*);
