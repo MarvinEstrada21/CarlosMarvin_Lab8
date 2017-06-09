@@ -17,8 +17,8 @@ class Radical: public Real{
 		int getIndice();
 		void setIndice(int);
 
-		double getRadicando();
-		void setRadicando(double);
+		int getRadicando();
+		void setRadicando(int);
 
 		Real* operator+ (Real*);
 		Real* operator- (Real*);
