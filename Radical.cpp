@@ -41,8 +41,8 @@ void Radical::setRadicando(int radicando){
 	this->radicando=radicando;
 }
 
-Real* Radical::operator+(Real* temp){
-	Real* suma=new Real();
+string Radical::operator+(Real* temp){
+	/*Real* suma=new Real();
 	if (dynamic_cast<Radical*>(temp)){
 		int coeficiente;
 		coeficiente.getCoeficiente();
@@ -57,12 +57,13 @@ Real* Radical::operator+(Real* temp){
 		numerador->getNumerador();
 		Racional* denominador= new Racional();
 		denominador->getDenominador();
-	}
+	}*/
+	return "";
 }	
 
 
 Real* Radical::operator-(Real* temp){
-	Real* resta= new Real();
+	/*Real* resta= new Real();
 	if (dynamic_cast<Radical*>(temp)){
 		int coeficiente;
 		coeficiente.getCoeficiente();
@@ -77,11 +78,12 @@ Real* Radical::operator-(Real* temp){
 		numerador->getNumerador();
 		Racional* denominador= new Racional();
 		denominador->getDenominador();
-	}
+	}*/ 
+	return temp;
 }
 
 Real* Radical::operator*(Real* temp){
-	Real* multiplicacion= new Real();
+	/*Real* multiplicacion= new Real();
 	if (dynamic_cast<Radical*>(temp)){
 		int coeficiente;
 		coeficiente.getCoeficiente();
@@ -96,7 +98,8 @@ Real* Radical::operator*(Real* temp){
 		numerador->getNumerador();
 		Racional* denominador= new Racional();
 		denominador->getDenominador();
-	}
+	}*/
+	return temp;
 }
 
 Real* Radical :: operator/ (Real* temp) {

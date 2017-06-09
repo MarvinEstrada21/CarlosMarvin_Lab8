@@ -41,18 +41,18 @@ int main() {
 							break;
 						}
 						case 3:{
-							int numero;
+							/*int numero;
 							cout<<"Ingrese un numero: "<<endl;
 							cin>>numero;
 							banco.push_back(new Real&(numero));
-							break;
+							break;*/
 						}
 						case 4:{
-							double numeroDecimal;
+							/*double numeroDecimal;
 							cout<<"Ingrese un numero decimal: ";
 							cin>>numeroDecimal;
 							banco.push_back(numeroDecimal);
-							break;
+							break;*/
 						}
 						case 5:{
 							salirOperaciones=true;

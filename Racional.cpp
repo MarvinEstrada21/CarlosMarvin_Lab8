@@ -51,11 +51,13 @@ string Racional :: operator+ (Real* temp) {
 	}
 	if (dynamic_cast<Radical*>(temp)) {
 		Radical* cast = static_cast <Radical*> (temp);
+		Racional* pasar = static_cast <Racional*> (temp);
+
 		int coef = cast -> getCoeficiente();
 		int indi = cast -> getIndice();
 		int radi = cast -> getRadicando();
 
-		resp << "(" << coef << ")(" << indi << ")^(" << radi << ")" << endl;
+		resp << "[(" << numerador << "+" << (denominador*coef) << ")(" << indi << ")^(" << radi << ")] / " << denominador << endl;
 	}
 	return resp.str();
 }
