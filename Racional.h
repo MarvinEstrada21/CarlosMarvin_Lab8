@@ -3,7 +3,7 @@
 #define RACIONAL_H
 using namespace std;
 
-class Racional: public Real{
+class Racional : public Real{
 	private:
 		double numerador;
 		double denominador;
@@ -16,6 +16,9 @@ class Racional: public Real{
 		double getDenominador();
 		void setDenominador(double);
 
+		Real* operator+ (Real*);
+		Real* operator- (Real*);
+		Real* operator* (Real*);
+		Real* operator/ (Real*);
 };
-
 #endif;

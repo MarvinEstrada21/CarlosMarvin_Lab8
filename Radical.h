@@ -19,4 +19,5 @@ class Radical: public Real{
 
 		double getRadicando();
 		void setRadicando(double);
-}
+};
+#endif
