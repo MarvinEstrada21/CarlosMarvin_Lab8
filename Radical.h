@@ -5,18 +5,20 @@
 
 class Radical: public Real{
 	private:
-		double coeficinete;
-		double indice;
-		double radicando;
+		int coeficinete;
+		int indice;
+		int radicando;
 	public:
 		Radical();
-		Radical(double,double,double);
-		double getCoeficiente();
-		void setCoeficiente(double);
+		Radical(int,int,int);
+		int getCoeficiente();
+		void setCoeficiente(int);
 
-		double getIndice();
-		void setIndice(double);
+		int getIndice();
+		void setIndice(int);
 
-		double getRadicando();
-		void setRadicando(double);
-}
+		int getRadicando();
+		void setRadicando(int);
+}:
+
+#endif
