@@ -5,16 +5,16 @@ using namespace std;
 
 class Racional : public Real{
 	private:
-		double numerador;
-		double denominador;
+		int numerador;
+		int denominador;
 	public:
-		Racional(double,double);
+		Racional(int,int);
 		Racional();
-		double getNumerador();
-		void setNumerador(double); 
+		int getNumerador();
+		void setNumerador(int); 
 
-		double getDenominador();
-		void setDenominador(double);
+		int getDenominador();
+		void setDenominador(int);
 
 		Real* operator+ (Real*);
 		Real* operator- (Real*);
