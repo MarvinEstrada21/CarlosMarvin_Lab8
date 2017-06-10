@@ -125,3 +125,4 @@ string Racional :: operator/ (Real* temp) {
 	}
 	return resp.str();
 }
+

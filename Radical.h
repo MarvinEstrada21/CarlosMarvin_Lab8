@@ -24,5 +24,6 @@ class Radical: public Real{
 		string operator- (Real*);
 		string operator* (Real*);
 		string operator/ (Real*);
+
 };
 #endif
