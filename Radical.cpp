@@ -3,6 +3,7 @@
 #include "Real.h"
 
 #include <iostream>
+#include <sstream>
 #include <typeinfo>
 
 using namespace std;
@@ -42,6 +43,7 @@ void Radical :: setRadicando(int radicando){
 }
 
 string Radical :: operator+(Real* temp) {
+	
 	return "";
 }
 
