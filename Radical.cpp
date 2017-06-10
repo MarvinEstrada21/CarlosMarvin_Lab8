@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <typeinfo>
+#include <sstream>
 
 using namespace std;
 
@@ -42,10 +43,33 @@ void Radical :: setRadicando(int radicando){
 }
 
 string Radical :: operator+(Real* temp) {
-	return "";
+	stringstream resp;
+	if (dynamic_cast<Radical*>(temp)) {
+		Radical* cast = static_cast <Radical*> (temp);
+
+		int coef = cast -> getCoeficiente();
+		int indi = cast -> getIndice();
+		int radi = cast -> getRadicando();
+
+		if (radi == radicando && indi == indice) {
+			resp << "(" << coef + coeficinete << ")(" << radicando << ")^(" << indice << ")" << endl; 
+		} else {
+			resp << "(" << coef << ")(" << radi << ")^(" << indi << ") + (" << coeficinete << ")(" << radicando << ")^(" << indice << ")" << endl;
+		}
+	}
+	if (dynamic_cast<Racional*>(temp)) {
+		Racional* cast = static_cast <Racional*> (temp);
+
+		int numerador = cast -> getNumerador();
+		int denominador = cast -> getDenominador();
+
+		resp << "[(" << numerador << " + " << (denominador*coeficinete) << ")(" << indice << ")^(" << radicando << ")] / " << denominador << endl;
+	}
+	return resp.str();
 }
 
 string Radical::operator-(Real* temp) {
+	
 	return "";
 }
 

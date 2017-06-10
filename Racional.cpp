@@ -36,7 +36,6 @@ void Racional :: setDenominador(int denominador) {
 
 string Racional :: operator+ (Real* temp) {
 	stringstream resp; 
-	int todo = 0;
 	if (dynamic_cast<Racional*>(temp)) {
 		Racional* cast = static_cast <Racional*> (temp);
 		int numerador = cast -> getNumerador();
@@ -50,7 +49,6 @@ string Racional :: operator+ (Real* temp) {
 	}
 	if (dynamic_cast<Radical*>(temp)) {
 		Radical* cast = static_cast <Radical*> (temp);
-		Racional* pasar = static_cast <Racional*> (temp);
 
 		int coef = cast -> getCoeficiente();
 		int indi = cast -> getIndice();
@@ -63,7 +61,6 @@ string Racional :: operator+ (Real* temp) {
 
 string Racional :: operator- (Real* temp) {
 	stringstream resp; 
-	int todo = 0;
 	if (dynamic_cast<Racional*>(temp)) {
 		Racional* cast = static_cast <Racional*> (temp);
 		int numerador = cast -> getNumerador();
@@ -77,7 +74,6 @@ string Racional :: operator- (Real* temp) {
 	}
 	if (dynamic_cast<Radical*>(temp)) {
 		Radical* cast = static_cast <Radical*> (temp);
-		Racional* pasar = static_cast <Racional*> (temp);
 
 		int coef = cast -> getCoeficiente();
 		int indi = cast -> getIndice();
@@ -90,7 +86,6 @@ string Racional :: operator- (Real* temp) {
 
 string  Racional :: operator* (Real* temp) {
 	stringstream resp; 
-	int todo = 0;
 	if (dynamic_cast<Racional*>(temp)) {
 		Racional* cast = static_cast <Racional*> (temp);
 		int numerador = cast -> getNumerador();
@@ -100,7 +95,6 @@ string  Racional :: operator* (Real* temp) {
 	}
 	if (dynamic_cast<Radical*>(temp)) {
 		Radical* cast = static_cast <Radical*> (temp);
-		Racional* pasar = static_cast <Racional*> (temp);
 
 		int coef = cast -> getCoeficiente();
 		int indi = cast -> getIndice();
@@ -113,7 +107,6 @@ string  Racional :: operator* (Real* temp) {
 
 string Racional :: operator/ (Real* temp) {
 	stringstream resp; 
-	int todo = 0;
 	if (dynamic_cast<Racional*>(temp)) {
 		Racional* cast = static_cast <Racional*> (temp);
 		int numerador = cast -> getNumerador();
@@ -123,7 +116,6 @@ string Racional :: operator/ (Real* temp) {
 	}
 	if (dynamic_cast<Radical*>(temp)) {
 		Radical* cast = static_cast <Radical*> (temp);
-		Racional* pasar = static_cast <Racional*> (temp);
 
 		int coef = cast -> getCoeficiente();
 		int indi = cast -> getIndice();
