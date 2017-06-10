@@ -9,8 +9,8 @@ class Real {
 	public:
 		Real();
 		virtual string operator+ (Real*);
-		virtual Real* operator- (Real*);
-		virtual Real* operator* (Real*);
-		virtual Real* operator/ (Real*);
+		virtual string operator- (Real*);
+		virtual string operator* (Real*);
+		virtual string operator/ (Real*);
 };
 #endif

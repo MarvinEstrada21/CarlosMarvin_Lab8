@@ -7,18 +7,18 @@ Real :: Real() {
 
 }
 
-string Real :: operator+ (Real* temp) {
+string Real :: operator+ (Real*) {
 	return "";
 }
 
-Real* Real :: operator- (Real* temp) {
-	return temp;
+string Real :: operator- (Real*) {
+	return "";
 }
 
-Real* Real :: operator* (Real* temp) {
-	return temp;
+string Real :: operator* (Real*) {
+	return "";
 }
 
-Real* Real :: operator/ (Real* temp) {
-	return temp;
+string Real :: operator/ (Real* temp) {
+	return "";
 }

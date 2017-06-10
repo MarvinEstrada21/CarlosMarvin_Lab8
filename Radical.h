@@ -21,8 +21,8 @@ class Radical: public Real{
 		void setRadicando(int);
 
 		string operator+ (Real*);
-		Real* operator- (Real*);
-		Real* operator* (Real*);
-		Real* operator/ (Real*);
+		string operator- (Real*);
+		string operator* (Real*);
+		string operator/ (Real*);
 };
 #endif
