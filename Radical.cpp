@@ -70,7 +70,6 @@ string Radical :: operator+(Real* temp) {
 }
 
 string Radical :: operator- (Real* temp) {
-	string Radical::operator-(Real* temp) {	
 	stringstream resp;
 	if (dynamic_cast<Radical*>(temp)) {
 		Radical* cast = static_cast <Radical*> (temp);

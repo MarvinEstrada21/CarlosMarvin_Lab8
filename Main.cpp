@@ -65,8 +65,8 @@ int main() {
 							cout<<"Elija una clase "<<endl;
 							cin>>opcionsuma;
 							if(opcionsuma==1){
-								if(typeid(*banco)=typeid(Radical)){
-									Radical* temp =dynamic_cast<Radical*>(banco);
+								if(typeid(banco) == typeid(Radical)){
+									//Radical* temp = dynamic_cast<Radical*>(banco);
 								}
 							}
 
