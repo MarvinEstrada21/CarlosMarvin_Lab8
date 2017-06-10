@@ -6,6 +6,7 @@
 #include <vector>
 #include <typeinfo>
 #include <sstream>
+#include <fstream>
 
 
 using namespace std;
@@ -20,6 +21,8 @@ int main() {
 	vector <Racional*> listaracional;
 	bool salirTodo=false;
 	stringstream var;
+	ofstream archive;
+	archive.open("Ecuaciones.txt",ios::app);
 	while(!salirTodo){
 		switch(menu()){
 			case 1:{
@@ -88,11 +91,14 @@ int main() {
 													//Real* temporal2 = dynamic_cast<Real*>(banco[posicion]);
 													Real* temporal2 =banco[posicion2];
 													respuesta = *temporal1 + temporal2;
+													archive<<temporal1<<'+'<<temporal2<<'='<<respuesta;
+
 												}
 												if(typeid(banco[posicion1])==typeid(Racional)){
 													Racional* temporal1 = dynamic_cast<Racional*>(banco[posicion1]);
 													Real* temporal2 =banco[posicion2];
 													respuesta=*temporal1+temporal2;
+													archive<<temporal1<<'+'<<temporal2<<'='<<respuesta;
 												}
 												break;
 											}
@@ -103,6 +109,7 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'+'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'+'<<temporal2<<'='<<respuesta;
 												break;
 											}
 											case 3:{
@@ -112,6 +119,7 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'+'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'+'<<temporal2<<'='<<respuesta;
 												break;
 											}
 											
@@ -137,11 +145,13 @@ int main() {
 													//Real* temporal2 = dynamic_cast<Real*>(banco[posicion]);
 													Real* temporal2 =banco[posicion2];
 													respuesta = *temporal1 + temporal2;
+													archive<<temporal1<<'+'<<temporal2<<'='<<respuesta;
 												}
 												if(typeid(banco[posicion1])==typeid(Radical)){
 													Radical* temporal1 = dynamic_cast<Radical*>(banco[posicion1]);
 													Real* temporal2 =banco[posicion2];
 													respuesta=*temporal1+temporal2;
+													archive<<temporal1<<'+'<<temporal2<<'='<<respuesta;
 												}
 												break;
 											}
@@ -152,6 +162,8 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'+'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'+'<<temporal2<<'='<<respuesta;
+
 												break;
 											}
 											case 3:{
@@ -161,6 +173,8 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'+'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'+'<<temporal2<<'='<<respuesta;
+
 												break;
 											}
 											
@@ -202,11 +216,15 @@ int main() {
 													//Real* temporal2 = dynamic_cast<Real*>(banco[posicion]);
 													Real* temporal2 =banco[posicion2];
 													respuesta = *temporal1 - temporal2;
+													archive<<temporal1<<'-'<<temporal2<<'='<<respuesta;
+
 												}
 												if(typeid(banco[posicion1])==typeid(Racional)){
 													Racional* temporal1 = dynamic_cast<Racional*>(banco[posicion1]);
 													Real* temporal2 =banco[posicion2];
 													respuesta=*temporal1-temporal2;
+													archive<<temporal1<<'-'<<temporal2<<'='<<respuesta;
+													
 												}
 												break;
 											}
@@ -217,6 +235,8 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'-'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'-'<<temporal2<<'='<<respuesta;
+
 												break;
 											}
 											case 3:{
@@ -226,6 +246,8 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'-'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'-'<<temporal2<<'='<<respuesta;
+
 												break;
 											}
 											
@@ -256,6 +278,8 @@ int main() {
 													Radical* temporal1 = dynamic_cast<Radical*>(banco[posicion1]);
 													Real* temporal2 =banco[posicion2];
 													respuesta=*temporal1-temporal2;
+													archive<<temporal1<<'-'<<temporal2<<'='<<respuesta;
+
 												}
 												break;
 											}
@@ -266,6 +290,7 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'-'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'-'<<temporal2<<'='<<respuesta;
 												break;
 											}
 											case 3:{
@@ -275,6 +300,8 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'-'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'-'<<temporal2<<'='<<respuesta;
+
 												break;
 											}
 											
@@ -316,11 +343,15 @@ int main() {
 													//Real* temporal2 = dynamic_cast<Real*>(banco[posicion]);
 													Real* temporal2 =banco[posicion2];
 													respuesta = *temporal1 * temporal2;
+													archive<<temporal1<<'*'<<temporal2<<'='<<respuesta;
+
 												}
 												if(typeid(banco[posicion1])==typeid(Racional)){
 													Racional* temporal1 = dynamic_cast<Racional*>(banco[posicion1]);
 													Real* temporal2 =banco[posicion2];
 													respuesta=*temporal1 * temporal2;
+													archive<<temporal1<<'*'<<temporal2<<'='<<respuesta;
+
 												}
 												break;
 											}
@@ -331,6 +362,8 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'*'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'*'<<temporal2<<'='<<respuesta;
+
 												break;
 											}
 											case 3:{
@@ -340,6 +373,8 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'*'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'*'<<temporal2<<'='<<respuesta;
+
 												break;
 											}
 											
@@ -365,11 +400,15 @@ int main() {
 													//Real* temporal2 = dynamic_cast<Real*>(banco[posicion]);
 													Real* temporal2 =banco[posicion2];
 													respuesta = *temporal1 * temporal2;
+													archive<<temporal1<<'*'<<temporal2<<'='<<respuesta;
+
 												}
 												if(typeid(banco[posicion1])==typeid(Radical)){
 													Radical* temporal1 = dynamic_cast<Radical*>(banco[posicion1]);
 													Real* temporal2 =banco[posicion2];
 													respuesta=*temporal1 * temporal2;
+													archive<<temporal1<<'*'<<temporal2<<'='<<respuesta;
+
 												}
 												break;
 											}
@@ -380,6 +419,8 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'*'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'*'<<temporal2<<'='<<respuesta;
+
 												break;
 											}
 											case 3:{
@@ -389,6 +430,7 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'*'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'*'<<temporal2<<'='<<respuesta;
 												break;
 											}
 											
@@ -430,11 +472,15 @@ int main() {
 													//Real* temporal2 = dynamic_cast<Real*>(banco[posicion]);
 													Real* temporal2 =banco[posicion2];
 													respuesta = *temporal1 / temporal2;
+													archive<<temporal1<<'/'<<temporal2<<'='<<respuesta;
+
 												}
 												if(typeid(banco[posicion1])==typeid(Racional)){
 													Racional* temporal1 = dynamic_cast<Racional*>(banco[posicion1]);
 													Real* temporal2 =banco[posicion2];
 													respuesta=*temporal1 / temporal2;
+													archive<<temporal1<<'/'<<temporal2<<'='<<respuesta;
+
 												}
 												break;
 											}
@@ -445,6 +491,8 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'/'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'/'<<temporal2<<'='<<respuesta;
+
 												break;
 											}
 											case 3:{
@@ -454,6 +502,8 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'/'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'/'<<temporal2<<'='<<respuesta;
+
 												break;
 											}
 											
@@ -479,11 +529,15 @@ int main() {
 													//Real* temporal2 = dynamic_cast<Real*>(banco[posicion]);
 													Real* temporal2 =banco[posicion2];
 													respuesta = *temporal1 / temporal2;
+													archive<<temporal1<<'/'<<temporal2<<'='<<respuesta;
+
 												}
 												if(typeid(banco[posicion1])==typeid(Radical)){
 													Radical* temporal1 = dynamic_cast<Radical*>(banco[posicion1]);
 													Real* temporal2 =banco[posicion2];
 													respuesta=*temporal1/temporal2;
+													archive<<temporal1<<'/'<<temporal2<<'='<<respuesta;
+
 												}
 												break;
 											}
@@ -494,6 +548,8 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'/'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'/'<<temporal2<<'='<<respuesta;
+
 												break;
 											}
 											case 3:{
@@ -503,6 +559,7 @@ int main() {
 												Real* temporal2 = banco[posicion1];
 												var<<numero<<'/'<<temporal2;
 												respuesta = var.str();
+												archive<<numero<<'/'<<temporal2<<'='<<respuesta;
 												break;
 											}
 											
@@ -532,6 +589,8 @@ int main() {
 			}
 		}
 	}
+	archive.close();
+	return 0;
 
 }
 

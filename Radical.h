@@ -1,5 +1,7 @@
 #include "Real.h"
-
+#include <iostream>
+#include <string>
+#include <sstream>
 #ifndef RADICAL_H
 #define RADICAL_H
 
@@ -24,6 +26,12 @@ class Radical: public Real{
 		string operator- (Real*);
 		string operator* (Real*);
 		string operator/ (Real*);
+
+		friend ostream& operator<<(ostream& write,Radical& rd){
+			stringstream text;
+			text<< '('<<rd.getCoeficiente()<<")("<<rd.getRadicando()<<")^("<<rd.getIndice()<<')';
+			return write<<text.str();
+		}
 
 };
 #endif

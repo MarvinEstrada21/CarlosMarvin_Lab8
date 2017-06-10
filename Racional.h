@@ -1,6 +1,9 @@
 #include "Real.h"
 #ifndef RACIONAL_H
 #define RACIONAL_H
+#include <iostream>
+#include <string>
+#include <sstream>
 using namespace std;
 
 class Racional : public Real{
@@ -21,5 +24,10 @@ class Racional : public Real{
 		string operator* (Real*);
 		string operator/ (Real*);
 
+		friend ostream& operator<<(ostream& write,Racional& rd){
+			stringstream text;
+			text<<rd.getNumerador()<<" / "<<rd.getDenominador();
+			return write<<text.str();
+		}
 };
 #endif
