@@ -35,7 +35,6 @@ void Racional :: setDenominador(int denominador) {
 }
 
 string Racional :: operator+ (Real* temp) {
-	//Racional* suma = new Real();
 	stringstream resp; 
 	int todo = 0;
 	if (dynamic_cast<Racional*>(temp)) {
@@ -44,9 +43,9 @@ string Racional :: operator+ (Real* temp) {
 		int denominador = cast -> getDenominador();
 
 		if (denominador == this -> denominador){
-			resp << (numerador + this -> numerador) << "/" << denominador;
+			resp << (numerador + this -> numerador) << " / " << denominador;
 		} else {
-			resp << (numerador + this -> numerador) << "/" << (denominador + this -> denominador) << endl;
+			resp << ((numerador*this -> denominador) + (denominador*this -> numerador)) << " / " << (denominador*this -> denominador) << endl;
 		}
 	}
 	if (dynamic_cast<Radical*>(temp)) {
@@ -57,33 +56,80 @@ string Racional :: operator+ (Real* temp) {
 		int indi = cast -> getIndice();
 		int radi = cast -> getRadicando();
 
-		resp << "[(" << numerador << "+" << (denominador*coef) << ")(" << indi << ")^(" << radi << ")] / " << denominador << endl;
+		resp << "[(" << numerador << " + " << (denominador*coef) << ")(" << indi << ")^(" << radi << ")] / " << denominador << endl;
 	}
 	return resp.str();
 }
 
-Real* Racional :: operator- (Real* temp) {
-	return temp;
-}
-
-Real* Racional :: operator* (Real* temp) {
-	return temp;
-}
-
-Real* Racional :: operator/ (Real* temp) {
-	return temp;
-}
-/*Real* Racional :: operator+ (Real* temp) {
-	Real* suma = new Real();
+string Racional :: operator- (Real* temp) {
+	stringstream resp; 
+	int todo = 0;
 	if (dynamic_cast<Racional*>(temp)) {
-		Racional* numer = new Racional();
-		numer -> getNumerador();
-		Racional* denom = new Racional();
-		denom -> getDenominador();
-		suma = (numer/denom) + temp;
+		Racional* cast = static_cast <Racional*> (temp);
+		int numerador = cast -> getNumerador();
+		int denominador = cast -> getDenominador();
+
+		if (denominador == this -> denominador){
+			resp << (numerador - this -> numerador) << " / " << denominador;
+		} else {
+			resp << ((numerador*(this -> denominador/2)) - (this -> numerador)*denominador/2) << " / " << ((denominador*this -> denominador)/2) << endl;
+		}
 	}
 	if (dynamic_cast<Radical*>(temp)) {
-		
+		Radical* cast = static_cast <Radical*> (temp);
+		Racional* pasar = static_cast <Racional*> (temp);
+
+		int coef = cast -> getCoeficiente();
+		int indi = cast -> getIndice();
+		int radi = cast -> getRadicando();
+
+		resp << "[(" << numerador << " - " << (denominador*coef) << ")(" << indi << ")^(" << radi << ")] / " << denominador << endl;
 	}
-	return suma;
-}*/
+	return resp.str();
+}
+
+string  Racional :: operator* (Real* temp) {
+	stringstream resp; 
+	int todo = 0;
+	if (dynamic_cast<Racional*>(temp)) {
+		Racional* cast = static_cast <Racional*> (temp);
+		int numerador = cast -> getNumerador();
+		int denominador = cast -> getDenominador();
+
+		resp << (numerador*this -> numerador) << " / " << (denominador*this -> denominador) << endl;
+	}
+	if (dynamic_cast<Radical*>(temp)) {
+		Radical* cast = static_cast <Radical*> (temp);
+		Racional* pasar = static_cast <Racional*> (temp);
+
+		int coef = cast -> getCoeficiente();
+		int indi = cast -> getIndice();
+		int radi = cast -> getRadicando();
+
+		resp << "[(" << (numerador*coef) << ")(" << radi << ")^(" << indi << ")] / " << denominador << endl;
+	}
+	return resp.str();
+}
+
+string Racional :: operator/ (Real* temp) {
+	stringstream resp; 
+	int todo = 0;
+	if (dynamic_cast<Racional*>(temp)) {
+		Racional* cast = static_cast <Racional*> (temp);
+		int numerador = cast -> getNumerador();
+		int denominador = cast -> getDenominador();
+
+		resp << (numerador*this -> denominador) << " / " << (denominador*this -> numerador) << endl;
+	}
+	if (dynamic_cast<Radical*>(temp)) {
+		Radical* cast = static_cast <Radical*> (temp);
+		Racional* pasar = static_cast <Racional*> (temp);
+
+		int coef = cast -> getCoeficiente();
+		int indi = cast -> getIndice();
+		int radi = cast -> getRadicando();
+
+		resp << numerador << " / [(" << (numerador*coef) << ")(" << radi << ")^(" << indi << ")]" << endl;
+	}
+	return resp.str();
+}
