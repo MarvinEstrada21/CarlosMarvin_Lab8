@@ -59,16 +59,15 @@ int main() {
 					switch(menuOperaciones()){
 						case 1:{
 							//sumar
-							int opcionsuma;
-							cout<<"1) Radical "<<endl
-								<<"2) Racional "<<endl;
-							cout<<"Seleccion una clase "<<endl;
+							int  opcionsuma;
+							cout<< "1) Radical "<<endl
+								<< "2) Racional "<<endl;
+							cout<<"Elija una clase "<<endl;
 							cin>>opcionsuma;
 							if(opcionsuma==1){
-								Radical* temp=dynamic_cast<Radical*>(banco[0]);	
-							}
-							if(opcionsuma==2){
-								Racional* temp=dynamic_cast<Racional*>(banco[0]);
+								if(typeid(*banco)=typeid(Radical)){
+									Radical* temp =dynamic_cast<Radical*>(banco);
+								}
 							}
 
 							break;							
