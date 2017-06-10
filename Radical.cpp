@@ -68,12 +68,12 @@ string Radical :: operator+(Real* temp) {
 	return resp.str();
 }
 
-string Radical::operator-(Real* temp) {
+string Radical :: operator- (Real* temp) {
 	
 	return "";
 }
 
-string Radical::operator*(Real* temp) {
+string Radical :: operator* (Real* temp) {
 	return "";
 }
 
